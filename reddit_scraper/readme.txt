@@ -34,3 +34,5 @@ goals for the scraper:
           -flair is also per-sub, so the same user can have a different flair on each sub
       -Note: it seems that if comments have a newline, it separates the comment into multiple paragraphs. The entire comment
         is in an "md" class, so all of its contents have to be pulled.
+      -promoted posts: skip these. might be easiest to skip the first post. From a cursory glance, it looks like these posts
+         are structured very similar to normal posts
