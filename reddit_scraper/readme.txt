@@ -38,3 +38,5 @@ goals for the scraper:
          are structured very similar to normal posts
       -Links within comments are really easy to ignore. Not sure they would provide any meaningful data if parsed. Lots of
         imgur links. Not a very helpful domain name.
+      -Really easy to just pull all the comments. A bit harder to pull just top-level ones. Would be easiest to use all
+         comments, unless there's a reason not to.
