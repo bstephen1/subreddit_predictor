@@ -36,3 +36,5 @@ goals for the scraper:
         is in an "md" class, so all of its contents have to be pulled.
       -promoted posts: skip these. might be easiest to skip the first post. From a cursory glance, it looks like these posts
          are structured very similar to normal posts
+      -Links within comments are really easy to ignore. Not sure they would provide any meaningful data if parsed. Lots of
+        imgur links. Not a very helpful domain name.
