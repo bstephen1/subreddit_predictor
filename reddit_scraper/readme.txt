@@ -7,8 +7,8 @@ Note: to edit which subreddits the spider crawls through, add them into the @url
   
 Format of output:
   TITLE : title of the post
-  TOTAL COMMENTS : the total number of comments (int)
-  POST TYPE : the domain the post links to. If it is "self.<SUBREDDIT>", it is a self post.
+  TOTAL : the total number of comments (int)
+  TYPE : the domain the post links to (binary). 1 = self post, 0 = link post
   SUBREDDIT : the subreddit the post belongs to (name of the subreddit, eg, "pcgaming")
   FLAIRS : a list containing all the user flairs from the post
   COMMENTS : a list containing all the top-level comments from the top 200 comments in the post
