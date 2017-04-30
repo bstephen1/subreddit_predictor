@@ -1,4 +1,5 @@
 import scrapy
+import re
 
 #spider that crawls through reddit getting data on posts
 
@@ -6,12 +7,8 @@ class RedditSpider(scrapy.Spider) :
 	#name of the spider
 	name = "reddit"
 	
-	#number of posts to scrape (MUST be a multiple of 25 -- only does whole pages)
-	#if it isn't a multiple of 25 the spider will NEVER stop
-	posts = 50
-
-	#current page
-	page = 0
+	#number of pages to scrape 
+	pages = 2
 
 	#all the subreddits it will crawl through
 	start_urls = [
@@ -28,8 +25,8 @@ class RedditSpider(scrapy.Spider) :
 			yield scrapy.Request(response.urljoin(post), callback=self.parse_post)
 		#load next page
 		next_page = response.css("div.nav-buttons span.next-button a::attr(href)").extract_first()
-		#stop when post limit is reached
-		if "count="+str(self.posts) not in next_page :
+		#stop when page limit is reached
+		if "count="+str(self.pages * 25) not in next_page :
 			yield scrapy.Request(response.urljoin(next_page), callback=self.parse)
 
 
@@ -38,9 +35,10 @@ class RedditSpider(scrapy.Spider) :
 		#all posts, and only children posts
 		everything = response.css("div.commentarea div.usertext-body p::text").extract()
 		children = response.css("div.commentarea div.child div.usertext-body p::text").extract()
+		com_num = response.css("div.content div.thing a.comments::text").extract_first()
 		yield {
 			'TITLE' : response.css("a.title::text").extract_first(),
-			'COMMENT NUMBER' : response.css("div.content div.thing a.comments::text").extract_first(),
+			'TOTAL COMMENTS' : int(re.search(r'\d+', com_num).group()),
 			'POST TYPE' : response.css("div.thing::attr(data-domain)").extract_first(),
 			'SUBREDDIT' : response.css("div.thing::attr(data-subreddit)").extract_first(),
 			'FLAIRS' : response.css("div.commentarea p.tagline span.flair::text").extract(),
