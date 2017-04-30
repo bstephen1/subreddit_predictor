@@ -6,10 +6,9 @@ class RedditSpider(scrapy.Spider) :
 	#name of the spider
 	name = "reddit"
 	
-	#number of posts to scrape (MUST be a multiple of 25 -- only does
-	#whole pages)
-	#also this has to be a STRING
-	posts = "50"
+	#number of posts to scrape (MUST be a multiple of 25 -- only does whole pages)
+	#if it isn't a multiple of 25 the spider will NEVER stop
+	posts = 50
 
 	#current page
 	page = 0
@@ -30,7 +29,7 @@ class RedditSpider(scrapy.Spider) :
 		#load next page
 		next_page = response.css("div.nav-buttons span.next-button a::attr(href)").extract_first()
 		#stop when post limit is reached
-		if "count="+self.posts not in next_page :
+		if "count="+str(self.posts) not in next_page :
 			yield scrapy.Request(response.urljoin(next_page), callback=self.parse)
 
 
