@@ -7,6 +7,8 @@ Note: to edit which subreddits the spider crawls through, add them into the @url
   
 Format of output:
   TITLE : title of the post
+  SCORE : amount of upvotes (int)
+  TFLAIR : title flair 
   TOTAL : the total number of comments (int)
   TYPE : the domain the post links to (binary). 1 = self post, 0 = link post
   SUBREDDIT : the subreddit the post belongs to (name of the subreddit, eg, "pcgaming")
