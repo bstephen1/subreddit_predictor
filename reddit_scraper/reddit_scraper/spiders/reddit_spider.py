@@ -14,6 +14,7 @@ class RedditSpider(scrapy.Spider) :
 	start_urls = [
 		"http://reddit.com/r/pcgaming/top/?sort=top&t=all",
 		"https://www.reddit.com/r/nottheonion/top/?sort=top&t=all",
+		"https://www.reddit.com/r/mildlyinteresting/top/?sort=top&t=all",
 	]
 	
 
@@ -40,8 +41,12 @@ class RedditSpider(scrapy.Spider) :
 		#used to find post type (link or self)
 		post_link = response.css("div.thing::attr(data-domain)").extract_first()
 		subreddit = response.css("div.thing::attr(data-subreddit)").extract_first()
+		#used to find the number of upvotes
+		score = response.css("div.side span.number::text").extract_first()
 		yield {
 			'TITLE' : response.css("a.title::text").extract_first(),
+			'SCORE' : int(''.join([x for x in score if x != ','])),
+			'TFLAIR' : response.css("span.linkflairlabel::text").extract_first(),
 			'TOTAL' : int(re.search(r'\d+', com_num).group()),
 			'TYPE' : 1 if post_link	== "self." + subreddit else 0,
 			'SUBREDDIT' : subreddit,
