@@ -1,0 +1,5 @@
+
+look into count vectorization to translate the comments / post title to a feature vector
+  want to elimate stop words (common words that dominate)
+  
+use the resulting feature vector to implement learning
