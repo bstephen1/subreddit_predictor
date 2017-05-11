@@ -1,5 +1,7 @@
 
-look into count vectorization to translate the comments / post title to a feature vector
-  want to elimate stop words (common words that dominate)
+count vectorization has been implemented. Look into possibly reducing the size of vector space.
+
+use the resulting feature vector to implement learning. Since we are likely working in high-dimensional space, a linear
+  separator looks appealing. Probably logistic regression. 
   
-use the resulting feature vector to implement learning
+Start out with a binary class label, and work up to as many as 30.
