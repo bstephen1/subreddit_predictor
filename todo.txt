@@ -1,7 +1,6 @@
 
 count vectorization has been implemented. Look into possibly reducing the size of vector space.
-
-use the resulting feature vector to implement learning. Since we are likely working in high-dimensional space, a linear
-  separator looks appealing. Probably logistic regression. 
   
-Start out with a binary class label, and work up to as many as 30.
+***logreg training is complete, but untested. Needs a file called "training.jl" in json line format
+  that has a feature vector (1D array) on each line, with the class label as the last element.
+  probably want to start out with only 2 subreddits in training.jl and work up to more if successful*** 
