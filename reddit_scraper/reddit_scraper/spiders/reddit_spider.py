@@ -8,13 +8,74 @@ class RedditSpider(scrapy.Spider) :
 	name = "reddit"
 	
 	#number of pages to scrape 
-	pages = 2
+	#set this to 2 for training dat (top all time), 1 for testing (top month)
+	pages = 1
 
 	#all the subreddits it will crawl through
 	start_urls = [
-		"http://reddit.com/r/pcgaming/top/?sort=top&t=all",
-		"https://www.reddit.com/r/nottheonion/top/?sort=top&t=all",
-		"https://www.reddit.com/r/mildlyinteresting/top/?sort=top&t=all",
+		#TRAINING DATA (TOP OF ALL TIME)
+		#"https://reddit.com/r/pcgaming/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/nottheonion/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/mildlyinteresting/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/overwatch/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/hearthstone/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/nintendoswitch/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/animalsbeingderps/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/crappydesign/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/cinemagraphs/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/writingprompts/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/explainlikeimfive/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/space/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/wholesomememes/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/nevertellmetheodds/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/floridaman/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/holdmybeer/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/evilbuildings/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/kenm/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/fitness/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/babyelephantgifs/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/dadjokes/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/maliciouscompliance/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/wheredidthesodago/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/thathappened/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/askreddit/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/aww/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/outoftheloop/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/talesfromretail/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/oldpeoplefacebook/top/?sort=top&t=all",
+		#"https://www.reddit.com/r/whatcouldgowrong/top/?sort=top&t=all",
+
+		#TESTING DATA (TOP OF THE MONTH)
+		#"https://reddit.com/r/pcgaming/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/nottheonion/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/mildlyinteresting/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/overwatch/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/hearthstone/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/nintendoswitch/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/animalsbeingderps/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/crappydesign/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/cinemagraphs/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/writingprompts/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/explainlikeimfive/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/space/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/wholesomememes/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/nevertellmetheodds/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/floridaman/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/holdmybeer/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/evilbuildings/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/kenm/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/fitness/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/babyelephantgifs/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/dadjokes/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/maliciouscompliance/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/wheredidthesodago/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/thathappened/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/askreddit/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/aww/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/outoftheloop/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/talesfromretail/top/?sort=top&t=month",
+		#"https://www.reddit.com/r/oldpeoplefacebook/top/?sort=top&t=month",
+		"https://www.reddit.com/r/whatcouldgowrong/top/?sort=top&t=month",
 	]
 	
 
