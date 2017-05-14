@@ -1,0 +1,6 @@
+Train: trainingData2.jl :: Test: None :: Acc: 1.000000
+Train: trainingData3.jl :: Test: None :: Acc: 0.866667
+Train: trainingData4.jl :: Test: None :: Acc: 0.750000
+Train: trainingData5.jl :: Test: None :: Acc: 0.880000
+Train: trainingData6.jl :: Test: None :: Acc: 0.866667
+Train: trainingData7.jl :: Test: None :: Acc: 0.942857
