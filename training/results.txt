@@ -1,6 +1,58 @@
-Train: trainingData2.jl :: Test: None :: Acc: 1.000000
-Train: trainingData3.jl :: Test: None :: Acc: 0.866667
-Train: trainingData4.jl :: Test: None :: Acc: 0.750000
-Train: trainingData5.jl :: Test: None :: Acc: 0.880000
-Train: trainingData6.jl :: Test: None :: Acc: 0.866667
-Train: trainingData7.jl :: Test: None :: Acc: 0.942857
+Train: trainingData2.jl :: Test: None :: CV 10-fold acc: 0.95 (+/- 0.10)
+Train: trainingData2.jl :: Test: testingData2.jl :: Mis: 2 :: All: 50 :: Acc: 0.96
+Train: trainingData3.jl :: Test: None :: CV 10-fold acc: 0.81 (+/- 0.22)
+Train: trainingData3.jl :: Test: testingData3.jl :: Mis: 13 :: All: 75 :: Acc: 0.83
+Train: trainingData4.jl :: Test: None :: CV 10-fold acc: 0.85 (+/- 0.16)
+Train: trainingData4.jl :: Test: testingData4.jl :: Mis: 16 :: All: 100 :: Acc: 0.84
+Train: trainingData5.jl :: Test: None :: CV 10-fold acc: 0.88 (+/- 0.12)
+Train: trainingData5.jl :: Test: testingData5.jl :: Mis: 18 :: All: 125 :: Acc: 0.86
+Train: trainingData6.jl :: Test: None :: CV 10-fold acc: 0.90 (+/- 0.11)
+Train: trainingData6.jl :: Test: testingData6.jl :: Mis: 19 :: All: 150 :: Acc: 0.87
+Train: trainingData7.jl :: Test: None :: CV 10-fold acc: 0.89 (+/- 0.10)
+Train: trainingData7.jl :: Test: testingData7.jl :: Mis: 19 :: All: 175 :: Acc: 0.89
+Train: trainingData8.jl :: Test: None :: CV 10-fold acc: 0.91 (+/- 0.10)
+Train: trainingData8.jl :: Test: testingData8.jl :: Mis: 20 :: All: 200 :: Acc: 0.90
+Train: trainingData9.jl :: Test: None :: CV 10-fold acc: 0.88 (+/- 0.14)
+Train: trainingData9.jl :: Test: testingData9.jl :: Mis: 28 :: All: 225 :: Acc: 0.88
+Train: trainingData10.jl :: Test: None :: CV 10-fold acc: 0.88 (+/- 0.12)
+Train: trainingData10.jl :: Test: testingData10.jl :: Mis: 31 :: All: 250 :: Acc: 0.88
+Train: trainingData11.jl :: Test: None :: CV 10-fold acc: 0.90 (+/- 0.10)
+Train: trainingData11.jl :: Test: testingData11.jl :: Mis: 33 :: All: 275 :: Acc: 0.88
+Train: trainingData12.jl :: Test: None :: CV 10-fold acc: 0.90 (+/- 0.09)
+Train: trainingData12.jl :: Test: testingData12.jl :: Mis: 34 :: All: 300 :: Acc: 0.89
+Train: trainingData13.jl :: Test: None :: CV 10-fold acc: 0.90 (+/- 0.08)
+Train: trainingData13.jl :: Test: testingData13.jl :: Mis: 36 :: All: 325 :: Acc: 0.89
+Train: trainingData14.jl :: Test: None :: CV 10-fold acc: 0.91 (+/- 0.08)
+Train: trainingData14.jl :: Test: testingData14.jl :: Mis: 37 :: All: 350 :: Acc: 0.89
+Train: trainingData15.jl :: Test: None :: CV 10-fold acc: 0.90 (+/- 0.07)
+Train: trainingData15.jl :: Test: testingData15.jl :: Mis: 43 :: All: 375 :: Acc: 0.89
+Train: trainingData16.jl :: Test: None :: CV 10-fold acc: 0.87 (+/- 0.07)
+Train: trainingData16.jl :: Test: testingData16.jl :: Mis: 50 :: All: 400 :: Acc: 0.88
+Train: trainingData17.jl :: Test: None :: CV 10-fold acc: 0.86 (+/- 0.09)
+Train: trainingData17.jl :: Test: testingData17.jl :: Mis: 59 :: All: 425 :: Acc: 0.86
+Train: trainingData18.jl :: Test: None :: CV 10-fold acc: 0.87 (+/- 0.09)
+Train: trainingData18.jl :: Test: testingData18.jl :: Mis: 63 :: All: 450 :: Acc: 0.86
+Train: trainingData19.jl :: Test: None :: CV 10-fold acc: 0.87 (+/- 0.08)
+Train: trainingData19.jl :: Test: testingData19.jl :: Mis: 87 :: All: 475 :: Acc: 0.82
+Train: trainingData20.jl :: Test: None :: CV 10-fold acc: 0.87 (+/- 0.07)
+Train: trainingData20.jl :: Test: testingData20.jl :: Mis: 89 :: All: 500 :: Acc: 0.82
+Train: trainingData21.jl :: Test: None :: CV 10-fold acc: 0.87 (+/- 0.07)
+Train: trainingData21.jl :: Test: testingData21.jl :: Mis: 96 :: All: 525 :: Acc: 0.82
+Train: trainingData22.jl :: Test: None :: CV 10-fold acc: 0.87 (+/- 0.07)
+Train: trainingData22.jl :: Test: testingData22.jl :: Mis: 99 :: All: 550 :: Acc: 0.82
+Train: trainingData23.jl :: Test: None :: CV 10-fold acc: 0.88 (+/- 0.06)
+Train: trainingData23.jl :: Test: testingData23.jl :: Mis: 123 :: All: 575 :: Acc: 0.79
+Train: trainingData24.jl :: Test: None :: CV 10-fold acc: 0.88 (+/- 0.07)
+Train: trainingData24.jl :: Test: testingData24.jl :: Mis: 148 :: All: 600 :: Acc: 0.75
+Train: trainingData25.jl :: Test: None :: CV 10-fold acc: 0.88 (+/- 0.06)
+Train: trainingData25.jl :: Test: testingData25.jl :: Mis: 174 :: All: 625 :: Acc: 0.72
+Train: trainingData26.jl :: Test: None :: CV 10-fold acc: 0.87 (+/- 0.06)
+Train: trainingData26.jl :: Test: testingData26.jl :: Mis: 197 :: All: 650 :: Acc: 0.70
+Train: trainingData27.jl :: Test: None :: CV 10-fold acc: 0.86 (+/- 0.05)
+Train: trainingData27.jl :: Test: testingData27.jl :: Mis: 231 :: All: 675 :: Acc: 0.66
+Train: trainingData28.jl :: Test: None :: CV 10-fold acc: 0.86 (+/- 0.05)
+Train: trainingData28.jl :: Test: testingData28.jl :: Mis: 255 :: All: 700 :: Acc: 0.64
+Train: trainingData29.jl :: Test: None :: CV 10-fold acc: 0.86 (+/- 0.06)
+Train: trainingData29.jl :: Test: testingData29.jl :: Mis: 278 :: All: 725 :: Acc: 0.62
+Train: trainingData30.jl :: Test: None :: CV 10-fold acc: 0.86 (+/- 0.06)
+Train: trainingData30.jl :: Test: testingData30.jl :: Mis: 303 :: All: 750 :: Acc: 0.60
