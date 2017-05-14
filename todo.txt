@@ -1,6 +1,4 @@
 
-count vectorization has been implemented. Look into possibly reducing the size of vector space.
-  
-***logreg training is complete, but untested. Needs a file called "training.jl" in json line format
-  that has a feature vector (1D array) on each line, with the class label as the last element.
-  probably want to start out with only 2 subreddits in training.jl and work up to more if successful*** 
+Data collection is (probably) complete. 
+
+All that's left is the slides and the report.
